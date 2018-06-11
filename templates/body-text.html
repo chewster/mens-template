@@ -1,6 +1,16 @@
-<div class="module body-text col-md-12">
-    <header> <h4>BODY TEXT</h4></header>
-    <div class="container">
+<!-- Initialize the editor. -->
+<script>
+    $(document).ready(function() {
+        $(function() { $('textarea').froalaEditor() });
+    });
+</script>
+
+<div class="module col-md-12">
+    <h4>BODY TEXT</h4>
+        <!-- Create a tag that we will use as the editable area. -->
+        <!-- You can use a div tag as well. -->
+        <textarea></textarea>
+    <div class="fr-view">
     </div>
     <footer>
         <a class="pull-left undo"href="#">UNDO</a>

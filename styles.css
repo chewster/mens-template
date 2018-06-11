@@ -71,6 +71,30 @@ footer a {
     display: inline-block;
     border-right: 2px solid RGB(250,250,250);
 }
+.user-info {
+    padding: 15px 0;
+}
+.user-icon {
+    background-color: white;
+}
+.user-info > div {
+    float: left;
+}
+.user-info .info {
+    width: 120px;
+    margin-left: 10px;
+}
+.user-info span {
+    width: 100%;
+    display: inline-block;
+}
+.user-info span.name {
+    font-size: 20px;
+}
+.user-info span.position {
+    font-size: 12px;
+}
+/* END OF HEADER */
 
 .wrapper {
     display: flex;
@@ -212,6 +236,9 @@ footer a {
     padding: 7px;
     width: 100%;
 }
+.fr-box  {
+    display: inline-block;
+}
 
 /* Module */
 #module {
@@ -272,6 +299,7 @@ ul.module-list > li {
     width: 100%;
     border: none;
 }
+/* END OF MODAL*/
 
 /*shapes and icons*/
 .circle {
