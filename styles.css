@@ -159,6 +159,11 @@ footer a {
     color: #7386D5;
     background: #fff;
 }
+.sidebar.left .dropdown-menu {
+    border: 0;
+    box-shadow: none;
+    padding-left: 15px;
+}
 
 /* Right sidebar */
 .box.info {

@@ -17,24 +17,32 @@
     <h1>canvas</h1>
 </div>
 <div class="wrapper">
-    <div class="sidebar">
+    <div class="sidebar left">
         <!-- Sidebar Header -->
         <div class="sidebar-header">
             <button class="ellipse">Compose <i class="icon icon-plus"></i></button>
         </div>
         <!-- Sidebar Links -->
-        <h4>Articles Catalog<i class="icon pull-right icon-down-open"></i></h4>
-        <ul class="list-unstyled components">
-            <li><a href="#">All Ariticles</a></li>
-            <li><!-- Link with dropdown items -->
-                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">My Articles</a>
-                <ul class="collapse list-unstyled" id="homeSubmenu">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
+        <div class="dropdown">
+
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h4>Articles Catalog  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i></h4>
+            </a>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <ul class="list-unstyled components">
+                    <li><a href="#">All Ariticles</a></li>
+                    <li><!-- Link with dropdown items -->
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">My Articles</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                            <li><a href="#">Page</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
     <div class="main container">
         <header><h3>Builder</h3></header>
