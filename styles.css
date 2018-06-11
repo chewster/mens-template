@@ -90,17 +90,16 @@ footer a {
     width: 100%;
     padding: 0;
 }
-.container.info .dropdown {
+.container.info .dropdown,
+.sidebar .dropdown.show > a {
     border-bottom: 2px solid RGB(205,205,205);
 }
 #add-module {
     color: RGB(255,118,103);
 }
 .main.container footer {
-    position: absolute;
-    top: 90vh;
-    width: 65%;
-    display: inline;
+    width: 100%;
+    display: inline-block;
 }
 .main.container footer button {
     height: 32px;
@@ -111,6 +110,7 @@ footer a {
 .module {
     border-top: 2px solid RGB(205,205,205);
     border-bottom: 2px solid RGB(205,205,205);
+    padding: 10px 0;
 }
 .module-type.active img {
     border: 2px solid  RGB(255,118,103);
