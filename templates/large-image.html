@@ -1,6 +1,11 @@
+<script>
+    $(document).ready(function() {
+        $(function() { $('textarea').froalaEditor() });
+    });
+</script>
 <div class="module large-image col-md-12">
-    <header> <h4>LARGE IMAGE</h4></header>
-    <div class="container">
+    <header> <h5>LARGE IMAGE</h5></header>
+    <div class="col-md-10 col-md-offset-1">
         <div class="row">
             <div class="col-md-12">
                 <form action="/upload-target" class="dropzone">
@@ -45,6 +50,7 @@
             </div>
         </div>
         <div class="row">
+            <h5>Body Text</h5>
             <!-- Create a tag that we will use as the editable area. -->
             <!-- You can use a div tag as well. -->
             <textarea></textarea>

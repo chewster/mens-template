@@ -136,14 +136,10 @@ footer a {
     border-bottom: 2px solid RGB(205,205,205);
     padding: 10px 0;
 }
-.module-type.active img {
-    border: 2px solid  RGB(255,118,103);
+.module header h5 {
+    color: black;
 }
-.modal-footer button.continue.close {
-    color: white;
-    font-weight: normal;
-    font-size: 14px;
-}
+
 
 /* social media module */
 .instagram li img {
@@ -152,12 +148,18 @@ footer a {
 
 /* Sidebar */
 .sidebar {
-    width: 15%;
+    width: 16%;
     max-width: 250px;
     min-height: 100vh;
     transition: all 0.3s;
-    -webkit-box-shadow: 10px 0 5px -2px RGB(205,205,205);
-    box-shadow: 10px 0 5px -2px RGB(205,205,205);
+    -webkit-box-shadow: 10px 0 5px -2px RGB(205, 205, 205);
+    box-shadow: 10px 0 5px -2px RGB(205, 205, 205);
+}
+ul#homeSubmenu {
+    padding-left: 15px;
+}
+.sidebar.right {
+    width: 25%;
 }
 .sidebar.active {
     margin-left: -250px;
@@ -200,7 +202,7 @@ footer a {
     position: relative;
     float: none;
 }
-.info .open .dropdown-menu {
+.info .open > .dropdown-menu {
     display: inline-block;
 }
 
@@ -240,7 +242,7 @@ footer a {
     display: inline-block;
 }
 
-/* Module */
+/* modal */
 #module {
     width: 450px;
     margin-left: auto;
@@ -260,6 +262,14 @@ footer a {
 .modal-content {
     height: 100%;
     width: 100%;
+}
+.module-type.active img {
+    border: 2px solid  RGB(255,118,103);
+}
+.modal-footer button.continue.close {
+    color: white;
+    font-weight: normal;
+    font-size: 14px;
 }
 button.close {
     color: RGB(255,118,103);

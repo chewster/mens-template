@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $(".dropdown-menu li a").click(function(){
+        var dropdownToggle = $(this).parents('.dropdown');
+        $(dropdownToggle).find('.dropdown-toggle span').text($(this).text());
+    });
     $('.module-type').click(function(){
         $('.module-type').removeClass('active');
         moduletype=$(this).attr('id');
