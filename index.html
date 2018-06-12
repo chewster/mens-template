@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="page-header">
-    <h1>canvas</h1>
+    <h3>canvas</h3>
     <div class="pull-right user-info">
         <div class="circle user-icon">
         </div>
@@ -57,7 +57,7 @@
         <!-- Sidebar Links -->
         <div class="dropdown open">
 
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class=dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <h4>Articles Catalog  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i></h4>
             </a>
 
@@ -83,24 +83,20 @@
         <header><h3>Builder</h3></header>
         <div class="container info">
             <div class="col-md-8">
-                <h5><i class="icon icon-asterisk"></i>Headline</h5>
+                <h6><i class="icon icon-asterisk"></i>Headline</h6>
                 <input type="text" placeholder="How to get over workweek when You're so totally over heels">
-                <h5><i class="icon icon-asterisk"></i>Author</h5>
-                <div class="dropdown show">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6><i class="icon icon-asterisk"></i>Author</h6>
+                <a class="dropdown-trigger" href="#" role="button" data-target="authors" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span>- select - </span><i class="icon pull-right icon-down-dir"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <ul>
-                            <li><a class="dropdown-item" href="#">JK Rowling</a></li>
-                            <li><a class="dropdown-item" href="#">Aziz Ansari</a></li>
-                            <li><a class="dropdown-item" href="#">You</a></li>
-                        </ul>
-                    </div>
-                </div>
+                </a>
+                <ul id="authors" class="dropdown-content">
+                    <li><a class="dropdown-item" href="#">JK Rowling</a></li>
+                    <li><a class="dropdown-item" href="#">Aziz Ansari</a></li>
+                    <li><a class="dropdown-item" href="#">You</a></li>
+                </ul>
             </div>
             <div class="col-md-12">
-                <h5><i class="icon icon-asterisk"></i>Category Image</h5>
+                <h6><i class="icon icon-asterisk"></i>Category Image</h6>
                 <form action="/upload-target" class="dropzone">
                     <div class="dz-default dz-message">
                         <img src="src/images/upload.png"> <span>Drop file to upload or Browse</span>
@@ -109,7 +105,7 @@
             </div>
         </div>
         <div id="add-module">
-            <button class="circle" data-toggle="modal" data-target="#module"><i class="icon icon-plus"></i>
+            <button class="circle modal-trigger" data-target="module"><i class="icon icon-plus"></i>
             </button>
             ADD MODULE
         </div>
@@ -133,10 +129,10 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal"><i class="icon icon-cancel-circle"></i> </button>
-                        <h3>Module Library</h3>
+                        <h5>Module Library</h5>
+                        <button type="button" class="circle close modal-close" data-dismiss="modal"><i class="icon icon-cancel-circle"></i> </button>
+
                     </div>
-                        <div class="modal-body">
                             <ul class="module-list">
                                 <li>
                                     Text
@@ -178,120 +174,110 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
-                    <div class="modal-footer">
-                        <button class="continue close" data-dismiss="modal">Continue</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="continue modal-close" data-dismiss="modal">Continue</button>
                 </div>
             </div>
         </div>
     </div>
-    <div class="sidebar right">
+    <ul class="sidebar right">
         <ul class="box info">
             <li>
                 <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon icon-tag"></i> Categories &amp; Tags <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <ul>
-                            <li><h5>PRIMARY CATEGORY</h5>
-                                <div class="dropdown show">
-                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <span>- select - </span><i class="icon pull-right icon-down-dir"></i>
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                        <ul>
-                                            <li><a class="dropdown-item" href="#">JK Rowling</a></li>
-                                            <li><a class="dropdown-item" href="#">Aziz Ansari</a></li>
-                                            <li><a class="dropdown-item" href="#">You</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h5>SECONDARY CATEGORIES</h5>
-                                <ul>
-                                    <li><input type="checkbox">People </li>
-                                    <li><input type="checkbox">Gear</li>
-                                    <li><input type="checkbox">Working out</li>
-                                    <li><input type="checkbox">Food &amp Diet</li>
-                                    <li><input type="checkbox">Music</li>
-                                    <li><input type="checkbox">Festivals</li>
-                                    <li><input type="checkbox">Money</li>
-                                    <li><input type="checkbox">How to Get Prompted</li>
-                                </ul>
-                            </li>
-                            <li>
-                                TAGS
-                                <div id="tags">
-                                    <input type="text" value="" placeholder="Add a tag" />
-                                </div>
-
-                            </li>
+                <a class="dropdown-trigger"  href="#" role="button" data-target="categories" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon icon-tag"></i> Categories &amp; Tags <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
+                </a>
+                <ul id="categories" class="dropdown-content">
+                    <li><h6>PRIMARY CATEGORY</h6>
+                        <a class="dropdown-trigger" href="#" role="button" data-target="primaries" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span>- select - </span><i class="icon pull-right icon-down-dir"></i>
+                        </a>
+                        <ul id="primaries" class="dropdown-content">
+                            <li><a class="dropdown-item" href="#">JK Rowling</a></li>
+                            <li><a class="dropdown-item" href="#">Aziz Ansari</a></li>
+                            <li><a class="dropdown-item" href="#">You</a></li>
                         </ul>
-                    </div>
+                    </li>
+                    <li>
+                        <h6>SECONDARY CATEGORIES</h6>
+                        <ul>
+                            <li><input type="checkbox">People </li>
+                            <li><input type="checkbox">Gear</li>
+                            <li><input type="checkbox">Working out</li>
+                            <li><input type="checkbox">Food &amp Diet</li>
+                            <li><input type="checkbox">Music</li>
+                            <li><input type="checkbox">Festivals</li>
+                            <li><input type="checkbox">Money</li>
+                            <li><input type="checkbox">How to Get Prompted</li>
+                        </ul>
+                    </li>
+                    <li>
+                        TAGS
+                        <div id="tags">
+                            <input type="text" value="" placeholder="Add a tag" />
+                        </div>
+                    </li>
+                </ul>
                 </div>
             </li>
             <li>
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon icon-search"></i>  Social  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <ul>
-                            <li><input type="checkbox">Include Pinterest CTA </li>
-                            <li>
-                                <h5>Fecebook Hed Override</h5>
-                                <input type="text">
-                            </li>
-                            <li>
-                                Facebook Image
-                                <button class="circle" data-toggle="modal" data-target="#module"><i class="icon icon-plus"></i>
-                                </button>
-                            </li>
-                            <li>
-                                <h5>Pinterest Caption Override</h5>
-                                <input type="text">
-                            </li>
-                            <li>
-                                Pinterest Image
-                                <button class="circle" data-toggle="modal" data-target="#module"><i class="icon icon-plus"></i>
-                                </button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                <a class="dropdown-trigger" href="#" role="button" data-target="media-accounts">
+                    <i class="icon icon-search"></i>  Social  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
+                </a>
+                <ul id="media-accounts" class="dropdown-content">
+                    <li><input type="checkbox">Include Pinterest CTA </li>
+                    <li>
+                        <h6>Fecebook Hed Override</h6>
+                        <input type="text">
+                    </li>
+                    <li>
+                        Facebook Image
+                        <button class="circle" data-toggle="modal" data-target="#module"><i class="icon icon-plus"></i></button>
+                    </li>
+                    <li>
+                        <h6>Pinterest Caption Override</h6>
+                        <input type="text">
+                    </li>
+                    <li>
+                        Pinterest Image
+                        <button class="circle" data-toggle="modal" data-target="#module"><i class="icon icon-plus"></i></button>
+                    </li>
+                </ul>
             </li>
             <li>
-                <div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="icon icon-search"></i>  SEO  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
-                    </a>
-
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <h5><i class="icon icon-asterisk"></i>Title Tag</h5>
+                <a class="dropdown-trigger" href="#" role="button" data-target="seo-info" aria-haspopup="true" aria-expanded="false">
+                    <i class="icon icon-search"></i>  SEO  <i class="icon pull-right icon-right-open"></i><i class="icon pull-right icon-down-open"></i>
+                </a>
+                <ul class="dropdown-content" id="seo-info" aria-labelledby="dropdownMenuLink">
+                    <li>
+                        <h6><i class="icon icon-asterisk"></i>Title Tag</h6>
                         <input type="text" id="tag">
-                        <h5><i class="icon icon-asterisk"></i>Meta Description</h5>
+                    </li>
+                    <li>
+                        <h6><i class="icon icon-asterisk"></i>Meta Description</h6>
                         <input type="text" id="descrip">
-                        <h5><i clas="icon icon-asterisk"></i>Meta Keyword Override</h5>
+                    </li>
+                    <li>
+                        <h6><i clas="icon icon-asterisk"></i>Meta Keyword Override</h6>
                         <input type="text" id="keyword">
-                        <h5><i class="icon icon-asterisk"></i>Web Page Url</h5>
+                    </li>
+                    <li>
+                        <h6><i class="icon icon-asterisk"></i>Web Page Url</h6>
                         <input type="text" id="url">
-                        <h5><i class="icon icon-asterisk"></i>Canonical URL Override</h5>
+                    </li>
+                    <li>
+                        <h6><i class="icon icon-asterisk"></i>Canonical URL Override</h6>
                         <input type="text" id="canonical">
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </li>
         </ul>
     </div>
 </div>
 
 <!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="lib/js/materialize.min.js"></script>
+<script type="text/javascript" src="lib/js/materialize.js"></script>
 
-</body>
 </body>
 </html>

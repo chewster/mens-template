@@ -1,7 +1,13 @@
 $(document).ready(function() {
-    $(".dropdown-menu li a").click(function(){
-        var dropdownToggle = $(this).parents('.dropdown');
-        $(dropdownToggle).find('.dropdown-toggle span').text($(this).text());
+    /*materialize initializers*/
+    $('.dropdown-trigger').dropdown();
+    $('.modal').modal();
+
+    $('.dropdown-trigger').click(function(){
+       $(this).toggleClass('open');
+    });
+    $('.dropdown-content').on('click', function(event) {
+        event.stopPropagation();
     });
     $('.module-type').click(function(){
         $('.module-type').removeClass('active');
