@@ -6,9 +6,17 @@ $(document).ready(function() {
     $('.dropdown-trigger').click(function(){
        $(this).toggleClass('open');
     });
-    $('.dropdown-content').on('click', function(event) {
+    $('ul.dropdown-content').click(function(event) {
+        console.log("testing wht this click event is functioning");
         event.stopPropagation();
     });
+    $('ul.dropdown-content').on('blur', function(){
+        event.stopPropagation();
+        console.log("what the hell is a blur");
+    });
+    $('ul#categories').click(function (event) {
+        event.stopPropagation();
+    })
     $('.module-type').click(function(){
         $('.module-type').removeClass('active');
         moduletype=$(this).attr('id');

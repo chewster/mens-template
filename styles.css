@@ -272,7 +272,6 @@ ul#homeSubmenu {
     font-size: 14px;
 }
 button.close {
-    color: RGB(255,118,103);
     opacity: 1;
     font-size: 28px;
     vertical-align: middle;
@@ -329,4 +328,9 @@ ul.module-list > li {
 }
 .icon-down-dir {
     color: RGB(255,118,103);
+}
+.icon-cancel:before {
+    content: '\e80c';
+    margin: auto;
+    width: 50%;
 }
